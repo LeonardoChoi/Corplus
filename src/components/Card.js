@@ -1,17 +1,14 @@
 import React from "react";
-import tecido2 from "../img/tecido2.jpg";
 import "../index.css";
 
-function Card() {
+function Card({ imgSrc, fabricName, price }) {
   return (
     <div className="card-container">
       <div className="card-content">
-        <img className="card-img" src={tecido2} alt="" />
-        <h1 className="card-fabric-name">
-          Tecido Floral Fiore Cor - 01 (Verde), 100% Algodão, Unid. 50cm x
-          1,50mt
-        </h1>
-        <h3 className="card-price">R$99.99</h3>
+        <img className="card-img" src={imgSrc} alt="" />
+        <h1 className="card-fabric-name">{fabricName}</h1>
+        <h3 className="card-price">{price}</h3>
+        <button className="buy-button">Comprar</button>
       </div>
     </div>
   );
