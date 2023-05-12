@@ -1,5 +1,6 @@
 function Header() {
-  return <div></div>;
+  return <div>Header</div>;
+  // types of fabric
 }
 
 export default Header;
