@@ -7,6 +7,7 @@ import Banner from "./components/Banner";
 
 function App() {
   // const { id, fabricName, fabricPrice, fabricImg } = fabricData;
+  // place the state here in parent component
   return (
     <>
       <Navbar />
