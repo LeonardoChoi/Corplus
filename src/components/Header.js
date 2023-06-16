@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 function Header() {
-  const [headder, setHeadder] = useState();
+  const [header, setHeader] = useState();
 
   return <div>{headder}</div>;
   // types of fabric
