@@ -1,9 +1,11 @@
 import React from "react";
+import { BsList } from "react-icons/bs";
+
 import "../index.css";
 
 function Navbar() {
   return (
-    <nav className="navbar">
+    <nav className="navbar ">
       <ul className="nav-links">
         <li>
           <a href="/">Tricoline Estampas</a>
@@ -21,6 +23,7 @@ function Navbar() {
           <a href="/">Marcas</a>
         </li>
       </ul>
+      <BsList className="ml-40" />
     </nav>
   );
 }
