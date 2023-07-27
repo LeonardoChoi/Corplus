@@ -1,5 +1,8 @@
 import React from "react";
 import "../index.css";
+import Link from "./Link";
+import Route from "./Route";
+import ProductPage from "../pages/ProductPage";
 
 function Card({ imgSrc, fabricName, price }) {
   return (
@@ -9,6 +12,7 @@ function Card({ imgSrc, fabricName, price }) {
         <h1 className="card-fabric-name">{fabricName}</h1>
         <h3 className="card-price">R${price}</h3>
         <button className="buy-button">Comprar</button>
+        <Link to="/ProductPage">Comprar</Link>
       </div>
     </div>
   );

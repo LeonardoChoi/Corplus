@@ -1,5 +1,10 @@
-function productPage() {
-  return <div></div>;
+function ProductPage() {
+  return (
+    <div>
+      <button>Click me</button>
+      <div>Product Page!!!</div>
+    </div>
+  );
 }
 
-export default productPage;
+export default ProductPage;

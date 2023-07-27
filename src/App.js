@@ -1,26 +1,25 @@
 import React from "react";
-import Card from "./components/Card";
-import fabricData from "./data/fabricData";
 import "./index.css";
-import Navbar from "./components/Navbar";
-import Banner from "./components/Banner";
+import Link from "./components/Link";
+import Route from "./components/Route";
+import CheckoutPage from "./pages/CheckoutPage";
+import ProductPage from "./pages/ProductPage";
+import HomePage from "./pages/HomePage";
 
 function App() {
   // const { id, fabricName, fabricPrice, fabricImg } = fabricData;
   // place the state here in parent component
   return (
     <>
-      <Navbar />
-      <Banner />
-      <div className="container">
-        {fabricData.map((fabric) => (
-          <Card
-            key={fabric.id}
-            fabricName={fabric.fabricName}
-            price={fabric.fabricPrice}
-            imgSrc={fabric.fabricImg}
-          />
-        ))}
+      <Link to="/HomePage">Corplus</Link>
+
+      <div>
+        <Route path="/HomePage">
+          <HomePage />
+        </Route>
+        <Route path="/ProductPage">
+          <ProductPage />
+        </Route>
       </div>
     </>
   );
