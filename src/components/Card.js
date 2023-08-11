@@ -11,8 +11,9 @@ function Card({ imgSrc, fabricName, price }) {
         <img className="card-img" src={imgSrc} alt="" />
         <h1 className="card-fabric-name">{fabricName}</h1>
         <h3 className="card-price">R${price}</h3>
-        <button className="buy-button">Comprar</button>
-        <Link to="/ProductPage">Comprar</Link>
+        <Link className="buy-button" to="/ProductPage">
+          <button className="buy-button">Comprar</button>
+        </Link>
       </div>
     </div>
   );
