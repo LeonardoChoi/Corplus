@@ -2,7 +2,6 @@ import React from "react";
 import "../index.css";
 import Link from "./Link";
 import Route from "./Route";
-import ProductPage from "../pages/ProductPage";
 
 function Card({ imgSrc, fabricName, price }) {
   return (

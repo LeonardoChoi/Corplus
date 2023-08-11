@@ -1,8 +1,14 @@
+import Navbar from "../components/Navbar";
+import fabricData from "../data/fabricData";
+
 function ProductPage() {
   return (
     <div>
-      <button>Click me</button>
-      <div>Product Page!!!</div>
+      <Navbar />
+
+      <div>
+        <div className="product-page-product-container"></div>
+      </div>
     </div>
   );
 }
