@@ -1,30 +1,20 @@
 import React from "react";
 import { BsList } from "react-icons/bs";
-
+import "./Navbar.css";
 import "../index.css";
+import { Link } from "react-router-dom";
+import { ShoppingCart } from "phosphor-react";
 
 function Navbar() {
   return (
-    <nav className="navbar ">
-      <ul className="nav-links">
-        <li>
-          <a href="/">Tricoline Estampas</a>
-        </li>
-        <li>
-          <a href="/">Estampas</a>
-        </li>
-        <li>
-          <a href="/">Tecidos</a>
-        </li>
-        <li>
-          <a href="/">Suplex</a>
-        </li>
-        <li>
-          <a href="/">Marcas</a>
-        </li>
-      </ul>
-      <BsList className="ml-40" />
-    </nav>
+    <div className="navbar">
+      <div className="links">
+        <Link to="/">Home</Link>
+        <Link to="/cart">
+          <ShoppingCart size={32} />
+        </Link>
+      </div>
+    </div>
   );
 }
 

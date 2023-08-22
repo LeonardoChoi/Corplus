@@ -1,0 +1,17 @@
+.navbar {
+  height: 5rem;
+  background-color: #f9f9f9;
+  display: flex;
+  justify-content: flex-end;
+  /* align-items: center; */
+}
+
+.links {
+  margin-right: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.links a {
+  margin-right: 1.5rem;
+}

@@ -6,7 +6,6 @@ import fabricData from "../data/fabricData";
 function HomePage() {
   return (
     <div>
-      <Navbar />
       <Banner />
       <div className="container">
         {fabricData.map((fabric) => (
