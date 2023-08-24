@@ -3,7 +3,6 @@ import "./index.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import HomePage from "./pages/HomePage";
-
 import Cart from "./pages/cart/Cart";
 
 function App() {
