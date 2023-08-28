@@ -14,7 +14,9 @@ function HomePage() {
             fabricName={fabric.fabricName}
             price={fabric.fabricPrice}
             imgSrc={fabric.fabricImg}
-          />
+          >
+            Hellofasdf
+          </Card>
         ))}
       </div>
     </div>

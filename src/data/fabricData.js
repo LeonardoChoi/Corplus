@@ -12,7 +12,7 @@ const fabricData = [
     id: 2,
     fabricName: "Tecido 2",
     fabricPrice: "20",
-    fabricImg: "path/to/fabric2.jpg",
+    fabricImg: tecido2,
   },
   {
     id: 3,
@@ -51,5 +51,4 @@ const fabricData = [
     fabricImg: "path/to/fabric3.jpg",
   },
 ];
-
 export default fabricData;
