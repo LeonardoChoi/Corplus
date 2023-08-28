@@ -3,8 +3,7 @@ import tecido2 from "../img/tecido2.jpg";
 const fabricData = [
   {
     id: 1,
-    fabricName:
-      "Tecido Floral Fiore Cor - 01 (Verde), 100% Algodão, Unid. 50cm x 1,50mt",
+    fabricName: "Tecido Floral Fiore Cor - 01 (Verde)",
     fabricPrice: "99, 99",
     fabricImg: tecido2,
   },
