@@ -3,8 +3,9 @@ import "../index.css";
 import { ShopContext } from "../context/shop-context";
 
 function Card({ imgSrc, fabricName, price, id }) {
-  const { addToCart } = useContext(ShopContext);
+  const { addToCart, cartItems } = useContext(ShopContext);
 
+  const cartItemAmount = cartItems[id];
   return (
     <div className="card-container">
       <div className="card-content">
@@ -12,7 +13,7 @@ function Card({ imgSrc, fabricName, price, id }) {
         <h1 className="card-fabric-name">{fabricName}</h1>
         <h3 className="card-price">R${price}</h3>
         <button className="addToCart-button" onClick={() => addToCart(id)}>
-          Add to cart
+          Add to cart {cartItemAmount > 0 && <>({cartItemAmount}) </>}
         </button>
       </div>
     </div>
