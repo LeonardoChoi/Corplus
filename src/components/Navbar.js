@@ -8,6 +8,9 @@ import { ShoppingCart } from "phosphor-react";
 function Navbar() {
   return (
     <div className="navbar">
+      <Link className="logo" to="/">
+        Corplus
+      </Link>
       <div className="links">
         <Link to="/">Home</Link>
         <Link to="/cart">
