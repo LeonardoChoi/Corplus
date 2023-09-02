@@ -107,3 +107,29 @@
   border: 2px solid;
   padding: 2rem;
 }
+
+/* cartItem css */
+.cartItem {
+  display: flex;
+  flex-direction: row;
+
+  align-items: center;
+  border: 2px solid;
+  padding: 1rem;
+  margin: 1rem;
+}
+
+.cartItemImg {
+  height: 15rem;
+  width: 15rem;
+  margin: 1rem;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+}
+
+.countHandler {
+  border: 1px solid;
+}

@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { ShopContext } from "../../context/shop-context";
 import fabricData from "../../data/fabricData";
+import CartItem from "../../components/CartItem";
 
 function Cart(props) {
   const { cartItems } = useContext(ShopContext);
@@ -12,7 +13,7 @@ function Cart(props) {
       <div className="cartItems">
         {fabricData.map((fabric) => {
           if (cartItems[fabric.id] !== 0) {
-            return <CartItem data={fabric} />;
+            return <CartItem key={fabric.id} data={fabric} />;
           }
         })}
         <div></div>

@@ -9,6 +9,7 @@ function HomePage() {
         {fabricData.map((fabric) => (
           <Card
             id={fabric.id}
+            key={fabric.id}
             fabricName={fabric.fabricName}
             price={fabric.fabricPrice}
             imgSrc={fabric.fabricImg}
