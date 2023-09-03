@@ -1,6 +1,6 @@
 import React, { createContext, useState } from "react";
 import fabricData from "../data/fabricData";
-
+import ProductPage from "../pages/ProductPage";
 export const ShopContext = createContext(null);
 
 const getDefaultCart = () => {
