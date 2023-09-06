@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar";
 import HomePage from "./pages/HomePage";
 import Cart from "./pages/cart/Cart";
 import { ShopContextProvider } from "./context/shop-context";
+import ErrorPage from "./pages/ErrorPage";
 // import { ShopContextProvider } from "./context/shop-context";
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/cart" element={<Cart />}></Route>
+            <Route path="*" element={<ErrorPage />}></Route>
           </Routes>
         </Router>
       </ShopContextProvider>
