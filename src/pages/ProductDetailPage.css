@@ -1,0 +1,49 @@
+/* Product Detail Page Container */
+.product-detail-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Product Image */
+.product-image {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+/* Product Title */
+.product-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Product Price */
+.product-price {
+  font-size: 18px;
+  color: #007bff; /* Blue color, you can change this */
+  margin-top: 5px;
+}
+
+/* Product Description */
+.product-description {
+  margin-top: 20px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Back to Products Link */
+.back-to-products {
+  display: block;
+  margin-top: 20px;
+  font-size: 16px;
+  text-decoration: none;
+  color: #007bff; /* Blue color, you can change this */
+}
+
+/* Back to Products Link Hover */
+.back-to-products:hover {
+  text-decoration: underline;
+}
