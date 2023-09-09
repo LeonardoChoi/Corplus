@@ -19,9 +19,6 @@ function Card({ imgSrc, fabricName, price, id }) {
         <button className="addToCart-button">
           <Link to={`/${id}`}>Comprar</Link>
         </button>
-        {/* <button className="addToCart-button" onClick={() => addToCart(id)}>
-          Add to cart {cartItemAmount > 0 && <>({cartItemAmount}) </>}
-        </button> */}
       </div>
     </div>
   );
