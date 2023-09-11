@@ -2,6 +2,7 @@ import Navbar from "../components/Navbar";
 import Card from "../components/Card";
 import fabricData from "../data/fabricData";
 import Banner from "../components/Banner";
+import Footer from "../components/Footer";
 
 function HomePage() {
   const containerStyle = {
@@ -24,6 +25,7 @@ function HomePage() {
             imgSrc={fabric.fabricImg}
           ></Card>
         ))}
+        <Footer />
       </div>
     </div>
   );
