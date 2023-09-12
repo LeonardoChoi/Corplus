@@ -8,7 +8,7 @@ function HomePage() {
   const containerStyle = {
     height: "360px",
     width: " 900px",
-    margin: "10px auto",
+    margin: "15px auto",
   };
   return (
     <div>

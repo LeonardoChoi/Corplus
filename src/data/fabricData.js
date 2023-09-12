@@ -3,7 +3,7 @@ import tecido2 from "../img/tecido2.jpg";
 const fabricData = [
   {
     id: 1,
-    fabricName: "Tecido Floral Fiore Cor - 01 (Verde)",
+    fabricName: "Tecido Floral Fiore Cor (Verde)",
     fabricPrice: "99, 99",
     fabricImg: tecido2,
     fabricDescription:

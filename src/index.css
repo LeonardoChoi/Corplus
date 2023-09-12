@@ -11,18 +11,19 @@
 
 /* for card component */
 .card-container {
-  width: 25rem;
-  height: 30rem;
+  width: 18rem;
+  height: 25rem;
   display: flex;
   align-items: center;
   justify-content: center;
-
-  margin: 0.2rem;
+  padding: 2px;
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
 
 .card-img {
+  width: 250px;
+  height: 250px;
 }
 
 .card-content {
@@ -31,8 +32,8 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 1rem;
-  margin: 0.5rem;
+  padding: 0.5rem;
+  margin: 0.2rem;
 }
 
 .card-fabric-name {
