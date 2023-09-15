@@ -6,8 +6,8 @@ import Footer from "../components/Footer";
 
 function HomePage() {
   const containerStyle = {
-    height: "480px",
-    width: " 1000px",
+    height: "360px",
+    width: " 900px",
     margin: "10px auto",
   };
   return (
