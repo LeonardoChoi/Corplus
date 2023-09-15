@@ -13,6 +13,7 @@ function Navbar() {
       </Link>
       <div className="links">
         <Link to="/">Home</Link>
+        <Link to="/login">Login </Link>
         <Link to="/cart">
           <ShoppingCart size={32} />
         </Link>

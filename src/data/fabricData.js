@@ -49,7 +49,7 @@ const fabricData = [
     fabricName: "Tecido 6",
     fabricPrice: "20",
     fabricImg:
-      "https://i.pinimg.com/236x/40/6e/44/406e443eb73307aa07a5f9112946c8bd.jpg",
+      "https://www.panolatras.com.br/cdn/shop/products/102123_40cm_1024x1024.jpg?v=1659377495",
     fabricDescription:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam aliquet, justo sed congue vulputate, lorem lectus malesuada urna.",
   },

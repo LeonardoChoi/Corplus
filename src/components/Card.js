@@ -14,7 +14,7 @@ function Card({ imgSrc, fabricName, price, id }) {
         <Link to={`/${id}`}>
           <img className="card-img" src={imgSrc} alt="" />
         </Link>
-        <h1 className="card-fabric-name">{fabricName}</h1>
+        <h1 className="card-fabric-name ">{fabricName}</h1>
         <h3 className="card-price">R${price}</h3>
         <button className="addToCart-button">
           <Link to={`/${id}`}>Comprar</Link>
