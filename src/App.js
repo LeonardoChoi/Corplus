@@ -10,6 +10,7 @@ import ErrorPage from "./pages/ErrorPage";
 import ProductDetailPage from "./pages/ProductDetailPage";
 import Dashboard from "./pages/Dashboard";
 import Login from "./pages/Login";
+import Discounts from "./pages/Discounts";
 // import { ShopContextProvider } from "./context/shop-context";
 
 function App() {
@@ -25,11 +26,9 @@ function App() {
             <Route path="/cart" element={<Cart />}></Route>
             <Route path="*" element={<ErrorPage />}></Route>
             <Route path="/:productId" element={<ProductDetailPage />} />
-            <Route
-              path="/dashboard"
-              element={<Dashboard user={user} />}
-            ></Route>
-            <Route path="/login" element={<Login setUser={setUser} />}></Route>
+            <Route path="/dashboard" element={<Dashboard user={user} />} />
+            <Route path="/login" element={<Login setUser={setUser} />} />
+            <Route path="/discounts" element={<Discounts />} />
           </Routes>
         </Router>
       </ShopContextProvider>

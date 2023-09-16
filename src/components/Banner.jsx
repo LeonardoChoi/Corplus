@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Banner.css";
 import { PiCaretLeftBold, PiCaretRightBold } from "react-icons/pi";
 import { IoEllipse } from "react-icons/io5";
@@ -32,7 +33,10 @@ function Banner() {
   return (
     <div className="banner-container">
       <PiCaretLeftBold onClick={prevSlide} className="right-arrow" />
-      <div className="banner-img" style={slideStyles}></div>
+      <Link to={"discounts"}>
+        <div className="banner-img" style={slideStyles}></div>
+        {/* every banner slide leads to the same page so i need to find out how to make them each go to their own page later */}
+      </Link>
       <PiCaretRightBold onClick={nextSlide} className="left-arrow" />
       <div className="dotContainer">
         {slides.map((slide, slideIndex) => (
@@ -41,6 +45,7 @@ function Banner() {
           </div>
         ))}
       </div>
+      {/* put links on every slide so that when you click the slide it goes to its product page */}
     </div>
   );
 }
