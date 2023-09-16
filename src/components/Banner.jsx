@@ -1,6 +1,7 @@
 import React from "react";
 import "./Banner.css";
 import { PiCaretLeftBold, PiCaretRightBold } from "react-icons/pi";
+import { IoEllipse } from "react-icons/io5";
 
 import fabricData from "../data/fabricData";
 import slides from "../data/slidesData";
@@ -24,11 +25,22 @@ function Banner() {
     setIndex(newIndex);
   };
 
+  const goToSlide = (slideIndex) => {
+    setIndex(slideIndex);
+  };
+
   return (
     <div className="banner-container">
       <PiCaretLeftBold onClick={prevSlide} className="right-arrow" />
       <div className="banner-img" style={slideStyles}></div>
       <PiCaretRightBold onClick={nextSlide} className="left-arrow" />
+      <div className="dotContainer">
+        {slides.map((slide, slideIndex) => (
+          <div key={slideIndex} onClick={() => goToSlide(slideIndex)}>
+            <IoEllipse className="slideDots" size={20} />
+          </div>
+        ))}
+      </div>
     </div>
   );
 }

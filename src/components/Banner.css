@@ -32,3 +32,18 @@
   cursor: pointer;
   font-size: 55px;
 }
+
+.dotContainer {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 2%;
+  right: 50%;
+  transform: translate(50%, 0);
+}
+
+.slideDots {
+  margin: 0 3px;
+  cursor: pointer;
+  color: lightgrey;
+}
