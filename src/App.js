@@ -11,7 +11,7 @@ import ProductDetailPage from "./pages/ProductDetailPage";
 import Dashboard from "./pages/Dashboard";
 import Login from "./pages/Login";
 import Discounts from "./pages/Discounts";
-// import { ShopContextProvider } from "./context/shop-context";
+import Modal from "./components/LoginModal";
 
 function App() {
   const [user, setUser] = useState(null);
@@ -29,6 +29,7 @@ function App() {
             <Route path="/dashboard" element={<Dashboard user={user} />} />
             <Route path="/login" element={<Login setUser={setUser} />} />
             <Route path="/discounts" element={<Discounts />} />
+            <Route path="/modal" element={<LoginModal />} />
           </Routes>
         </Router>
       </ShopContextProvider>

@@ -1,7 +1,7 @@
 import React from "react";
 
-function Modal() {
+function LoginModal() {
   return <div></div>;
 }
 
-export default Modal;
+export default LoginModal;
