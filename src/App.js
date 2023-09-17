@@ -9,9 +9,8 @@ import Cart from "./pages/cart/Cart";
 import ErrorPage from "./pages/ErrorPage";
 import ProductDetailPage from "./pages/ProductDetailPage";
 import Dashboard from "./pages/Dashboard";
-import Login from "./pages/Login";
 import Discounts from "./pages/Discounts";
-import Modal from "./components/LoginModal";
+import LoginModalPage from "./pages/LoginModalPage";
 
 function App() {
   const [user, setUser] = useState(null);
@@ -26,10 +25,8 @@ function App() {
             <Route path="/cart" element={<Cart />}></Route>
             <Route path="*" element={<ErrorPage />}></Route>
             <Route path="/:productId" element={<ProductDetailPage />} />
-            <Route path="/dashboard" element={<Dashboard user={user} />} />
-            <Route path="/login" element={<Login setUser={setUser} />} />
             <Route path="/discounts" element={<Discounts />} />
-            <Route path="/modal" element={<LoginModal />} />
+            <Route path="/LoginModalPage" element={<LoginModalPage />} />
           </Routes>
         </Router>
       </ShopContextProvider>

@@ -4,6 +4,7 @@ import "./Navbar.css";
 import "../index.css";
 import { Link } from "react-router-dom";
 import { ShoppingCart } from "phosphor-react";
+import LoginModalPage from "../pages/LoginModalPage";
 
 function Navbar() {
   return (
@@ -13,7 +14,7 @@ function Navbar() {
       </Link>
       <div className="links">
         <Link to="/">Home</Link>
-        <Link to="/login">Login </Link>
+        <Link to="/LoginModalPage">Login </Link>
         <Link to="/cart">
           <ShoppingCart size={32} />
         </Link>
