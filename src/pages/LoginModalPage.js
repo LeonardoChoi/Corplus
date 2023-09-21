@@ -9,12 +9,16 @@ function LoginModalPage() {
     setShowModal(true);
   };
 
+  const handleClose = () => {
+    setShowModal(false);
+  };
+
   return (
     <div>
       <button onClick={handleClick} className="login-button">
         Login
       </button>
-      {showModal && <LoginModal />}
+      {showModal && <LoginModal onClose={handleClose} />}
     </div>
   );
 }
