@@ -13,12 +13,22 @@ function LoginModalPage() {
     setShowModal(false);
   };
 
+  const actionBar = (
+    <div>
+      <button className="login-button">Login!</button>
+    </div>
+  );
+  const modal = (
+    <LoginModal onClose={handleClose} actionBar={actionBar}>
+      <p>content to show in children</p>
+    </LoginModal>
+  );
   return (
     <div>
       <button onClick={handleClick} className="login-button">
         Login
       </button>
-      {showModal && <LoginModal onClose={handleClose} />}
+      {showModal && modal}
     </div>
   );
 }
