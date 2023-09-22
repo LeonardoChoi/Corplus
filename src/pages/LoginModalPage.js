@@ -15,7 +15,9 @@ function LoginModalPage() {
 
   const actionBar = (
     <div>
-      <button className="login-button">Login!</button>
+      <button className="login-button" onClick={handleClose}>
+        Login!
+      </button>
     </div>
   );
   const modal = (
