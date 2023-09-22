@@ -1,7 +1,17 @@
 import ReactDOM from "react-dom";
 import React from "react";
 import "../index.css";
+import { useEffect } from "react";
+
 function LoginModal({ onClose, children, actionBar }) {
+  useEffect(() => {
+    document.body.classList.add("overflow-hidden");
+
+    return () => {
+      document.body.classList.remove("overflow-hidden");
+    };
+  });
+
   return ReactDOM.createPortal(
     <div>
       {/* position absolute makes the element go to the top left corner of the closest parent that has a position other than static. Since here there is no parent with a position other than static then the element is placed in the top left corner of the entire html document */}
