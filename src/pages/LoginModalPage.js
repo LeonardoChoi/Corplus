@@ -1,6 +1,7 @@
 import LoginModal from "../components/LoginModal";
+import FabricsList from "../components/FabricsList";
 import "../index.css";
-import React, { cloneElement, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { auth, googleProvider } from "../config/firebase";
 import { db } from "../config/firebase";
 import { getDocs, collection } from "firebase/firestore";
@@ -14,18 +15,6 @@ function LoginModalPage() {
   const [showModal, setShowModal] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
-  const fabricsCollectionRef = collection(db, "fabrics");
-
-  useEffect(() => {
-    const getFabricList = async () => {
-      try {
-        const data = await getDocs();
-      } catch (err) {
-        console.error(err);
-      }
-    };
-  }, []);
 
   const signIn = async () => {
     try {
@@ -92,7 +81,9 @@ function LoginModalPage() {
       <button onClick={handleClick} className="login-button">
         Login
       </button>
-      <p></p>
+
+      <FabricsList />
+
       {showModal && modal}
     </div>
   );
