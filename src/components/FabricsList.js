@@ -29,10 +29,14 @@ function FabricsList() {
   }, []);
 
   const onSubmit = async () => {
-    await addDoc(fabricsCollectionRef, {
-      estampa: newEstampa,
-      tecido: newTecido,
-    });
+    try {
+      await addDoc(fabricsCollectionRef, {
+        estampa: newEstampa,
+        tecido: newTecido,
+      });
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   return (
