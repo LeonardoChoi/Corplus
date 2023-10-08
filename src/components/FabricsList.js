@@ -1,7 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { db } from "../config/firebase";
-import { getDocs, collection } from "firebase/firestore";
+import { getDocs, collection, addDoc } from "firebase/firestore";
 
 function FabricsList() {
   const [fabricList, setFabricList] = useState([]);
@@ -28,6 +28,13 @@ function FabricsList() {
     getFabricList();
   }, []);
 
+  const onSubmit = async () => {
+    await addDoc(fabricsCollectionRef, {
+      estampa: newEstampa,
+      tecido: newTecido,
+    });
+  };
+
   return (
     <div>
       <div className="flex flex-col w-60">
@@ -43,7 +50,7 @@ function FabricsList() {
           className=""
           type="text"
         />
-        <button>Submit</button>
+        <button onClick={onSubmit}>Submit</button>
       </div>
       {fabricList.map((fabric) => (
         <div key={fabric.id}>{fabric.estampa}</div>
