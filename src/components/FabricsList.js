@@ -25,6 +25,9 @@ function FabricsList() {
 
   return (
     <div>
+      <div>
+        <input placeholder="estampa" className="input-form" type="text"></input>
+      </div>
       {fabricList.map((fabric) => (
         <div key={fabric.id}>{fabric.estampa}</div>
       ))}

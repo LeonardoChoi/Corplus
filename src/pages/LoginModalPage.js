@@ -1,10 +1,8 @@
 import LoginModal from "../components/LoginModal";
 import FabricsList from "../components/FabricsList";
 import "../index.css";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { auth, googleProvider } from "../config/firebase";
-import { db } from "../config/firebase";
-import { getDocs, collection } from "firebase/firestore";
 import {
   createUserWithEmailAndPassword,
   signInWithPopup,
@@ -57,13 +55,15 @@ function LoginModalPage() {
   );
   const modal = (
     <LoginModal onClose={handleClose} actionBar={actionBar}>
-      <div>
+      <div className="flex flex-col w-1/3 space-y-1">
         <input
+          className="input-form"
           type="text"
           placeholder="email..."
           onChange={(e) => setEmail(e.target.value)}
         />
         <input
+          className="input-form"
           type="password"
           placeholder="password..."
           onChange={(e) => setPassword(e.target.value)}
@@ -71,7 +71,7 @@ function LoginModalPage() {
         <button onClick={signIn}>Register</button>
         <div>
           <button onClick={signInWithGoogle}>Sign In With Google</button>
-          <button onClick={logout}>logout</button>
+          <button onClick={logout}>Logout</button>
         </div>
       </div>
     </LoginModal>
