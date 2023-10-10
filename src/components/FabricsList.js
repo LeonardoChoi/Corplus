@@ -1,7 +1,13 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { db } from "../config/firebase";
-import { getDocs, collection, addDoc } from "firebase/firestore";
+import {
+  getDocs,
+  collection,
+  addDoc,
+  deleteDoc,
+  doc,
+} from "firebase/firestore";
 
 function FabricsList() {
   const [fabricList, setFabricList] = useState([]);
@@ -26,7 +32,7 @@ function FabricsList() {
       }
     };
     getFabricList();
-  }, []);
+  }, [fabricsCollectionRef]);
 
   const onSubmit = async () => {
     try {
@@ -39,9 +45,14 @@ function FabricsList() {
     }
   };
 
+  const onDelete = async (id) => {
+    const fabricDoc = doc(db, "fabrics", id);
+    await deleteDoc(fabricDoc);
+  };
+
   return (
     <div>
-      <div className="flex flex-col w-60">
+      <div className="flex w-60 flex-col">
         <h1>Add a Fabric To Invetory</h1>
         <input
           placeholder="Estampa"
@@ -57,7 +68,11 @@ function FabricsList() {
         <button onClick={onSubmit}>Submit</button>
       </div>
       {fabricList.map((fabric) => (
-        <div key={fabric.id}>{fabric.estampa}</div>
+        <div key={fabric.id}>
+          <h1>Estampa:{fabric.estampa}</h1>
+          <h2>Tecido:{fabric.tecido}</h2>
+          <button onClick={() => onDelete(fabric.id)}>Delete</button>
+        </div>
       ))}
     </div>
   );
