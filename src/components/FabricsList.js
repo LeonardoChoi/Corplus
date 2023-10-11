@@ -15,6 +15,7 @@ function FabricsList() {
   // state for adding new fabrics to firestore
   const [newEstampa, setNewEstampa] = useState("");
   const [newTecido, setNewTecido] = useState("");
+  const [updatedTitle, setUpdatedTitle] = useState("");
 
   const fabricsCollectionRef = collection(db, "fabrics");
 
@@ -50,6 +51,8 @@ function FabricsList() {
     await deleteDoc(fabricDoc);
   };
 
+  const updateFabricName = async();
+
   return (
     <div>
       <div className="flex w-60 flex-col">
@@ -72,6 +75,8 @@ function FabricsList() {
           <h1>Estampa:{fabric.estampa}</h1>
           <h2>Tecido:{fabric.tecido}</h2>
           <button onClick={() => onDelete(fabric.id)}>Delete</button>
+          <input placeholder="Nova estampa..."></input>
+          <button>Mudar Estampa</button>
         </div>
       ))}
     </div>
