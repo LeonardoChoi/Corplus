@@ -1,6 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { db } from "../config/firebase";
+import { db, auth } from "../config/firebase";
 import {
   getDocs,
   collection,
@@ -41,6 +41,7 @@ function FabricsList() {
       await addDoc(fabricsCollectionRef, {
         estampa: newEstampa,
         tecido: newTecido,
+        userId: auth?.currentUser?.uid,
       });
     } catch (err) {
       console.log(err);
