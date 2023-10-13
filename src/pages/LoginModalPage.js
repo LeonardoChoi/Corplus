@@ -55,7 +55,7 @@ function LoginModalPage() {
   );
   const modal = (
     <LoginModal onClose={handleClose} actionBar={actionBar}>
-      <div className="flex flex-col w-1/3 space-y-1">
+      <div className="flex w-1/3 flex-col space-y-1">
         <input
           className="input-form"
           type="text"

@@ -1,6 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { db, auth } from "../config/firebase";
+import { db, auth, storage } from "../config/firebase";
 import {
   getDocs,
   collection,
@@ -9,6 +9,7 @@ import {
   updateDoc,
   doc,
 } from "firebase/firestore";
+import { ref, uploadBytes} from "firebase/storage";
 
 function FabricsList() {
   const [fabricList, setFabricList] = useState([]);
@@ -16,7 +17,12 @@ function FabricsList() {
   // state for adding new fabrics to firestore
   const [newEstampa, setNewEstampa] = useState("");
   const [newTecido, setNewTecido] = useState("");
+
+  // Update name
   const [updatedName, setUpdatedName] = useState("");
+
+  // File upload state
+  const [fileUpload, setFileUpload] = useState(null);
 
   const fabricsCollectionRef = collection(db, "fabrics");
 
@@ -58,6 +64,12 @@ function FabricsList() {
     await updateDoc(fabricDoc, { title: updatedName });
   };
 
+  const uploadFile = async () => {
+    if (!fileUpload) return;
+    const fileFolderRef = ref(storage, `projectFiles/${fileUpload.name}`);
+    uploadBytes(fileFolderRef, fileUpload);
+  };
+
   return (
     <div>
       <div className="flex w-60 flex-col">
@@ -87,6 +99,15 @@ function FabricsList() {
           <button onClick={() => updateFabricName(fabric.id)}>
             Mudar Estampa
           </button>
+
+          <div>
+            <input
+              type="file"
+              placeholder="File Upload..."
+              onChange={(e) => setFileUpload(e.target.files[0])}
+            />
+            <button onClick={uploadFile}>Upload File</button>
+          </div>
         </div>
       ))}
     </div>
