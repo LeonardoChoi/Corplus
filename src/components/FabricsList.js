@@ -6,6 +6,7 @@ import {
   collection,
   addDoc,
   deleteDoc,
+  updateDoc,
   doc,
 } from "firebase/firestore";
 
@@ -51,7 +52,10 @@ function FabricsList() {
     await deleteDoc(fabricDoc);
   };
 
-  const updateFabricName = async () => {};
+  const updateFabricName = async (id) => {
+    const fabricDoc = doc(db, "fabrics", id);
+    await updateDoc(fabricDoc, { title: updatedName });
+  };
 
   return (
     <div>
